@@ -11,9 +11,7 @@ function duplicateLetters(...args) {
     }
   });
 
-  Object.values(letterCounter).forEach((letterCount) => {
-    if (letterCount > maxCount) maxCount = letterCount;
-  });
+  maxCount = Math.max(...Object.values(letterCounter));
 
   return maxCount === 1 ? false : maxCount;
 }
